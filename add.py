@@ -1,3 +1,4 @@
 a = 10
 b = 19
-print (a + b)
+c = 30
+print (a + b + c)
