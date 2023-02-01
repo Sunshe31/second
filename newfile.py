@@ -1,5 +1,5 @@
 a = 10
-if [[( $n -eq 10 || $n -eq 20 )]]
+if [[( $a -eq 10 || $a -eq 20 )]]
 then
 echo "you won this game"
 else
