@@ -1,8 +1,6 @@
-
-a = 14
 a = 15
-if [[( $a -eq 14 || $a -eq 30 )]]
-then
+if [[( $a -eq 15 || $a -eq 20 )]]
+wqthen
 echo "you won this game"
 else
 echo "you lost the game"
