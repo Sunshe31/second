@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.9.11 on win32)" generated="20231025 12:59:44.027" rpa="false" schemaversion="4">
+<suite id="s1" name="Testcase" source="C:\Users\Archimedis Digital\Robot Framework\testcase.robot">
+<test id="s1-t1" name="tc01" line="5">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://petstore.swagger.io/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231025 12:59:44.240" level="INFO">Opening browser 'chrome' to base url 'https://petstore.swagger.io/'.</msg>
+<msg timestamp="20231025 12:59:46.875" level="WARN">The chromedriver version (117.0.5938.92) detected in PATH at C:\Users\Archimedis Digital\Robot Framework\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.118); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231025 12:59:44.240" endtime="20231025 12:59:52.144"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231025 12:59:52.144" endtime="20231025 12:59:52.274"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231025 12:59:52.642" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231025 12:59:52.274" endtime="20231025 12:59:52.642"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231025 12:59:52.642" endtime="20231025 12:59:54.840"/>
+</kw>
+<tag>pet</tag>
+<status status="PASS" starttime="20231025 12:59:44.240" endtime="20231025 12:59:54.841"/>
+</test>
+<test id="s1-t2" name="tc02" line="12">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1/</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231025 12:59:54.841" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com/v1/'.</msg>
+<status status="PASS" starttime="20231025 12:59:54.841" endtime="20231025 12:59:58.043"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231025 12:59:58.043" endtime="20231025 12:59:58.193"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231025 12:59:58.436" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231025 12:59:58.193" endtime="20231025 12:59:58.436"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231025 12:59:58.436" endtime="20231025 13:00:00.633"/>
+</kw>
+<tag>sauce</tag>
+<status status="PASS" starttime="20231025 12:59:54.841" endtime="20231025 13:00:00.634"/>
+</test>
+<status status="PASS" starttime="20231025 12:59:44.027" endtime="20231025 13:00:00.635"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">pet</stat>
+<stat pass="1" fail="0" skip="0">sauce</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Testcase">Testcase</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231025 12:59:46.875" level="WARN">The chromedriver version (117.0.5938.92) detected in PATH at C:\Users\Archimedis Digital\Robot Framework\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.118); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.9.11 on win32)" generated="20231219 10:44:21.001" rpa="false" schemaversion="4">
+<suite id="s1" name="Testscripts" source="c:\Users\Archimedis Digital\Robot Framework\testscripts.robot">
+<test id="s1-t1" name="Testacse1" line="13">
+<kw name="Select Worksheet">
+<kw name="Open Excel Document" library="ExcelLibrary">
+<arg>excelofall.xlsx</arg>
+<arg>doc_id</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" starttime="20231219 10:44:21.872" endtime="20231219 10:44:21.890"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.872" endtime="20231219 10:44:21.890"/>
+</kw>
+<kw name="Read Excel Row" library="ExcelLibrary">
+<var>${no}</var>
+<arg>10</arg>
+<doc>Returns content of a row from the current sheet of the document.</doc>
+<msg timestamp="20231219 10:44:21.890" level="INFO">${no} = [10, 'dummy4']</msg>
+<status status="PASS" starttime="20231219 10:44:21.890" endtime="20231219 10:44:21.897"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${no}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:21.899" level="INFO">[10, 'dummy4']</msg>
+<status status="PASS" starttime="20231219 10:44:21.899" endtime="20231219 10:44:21.902"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.872" endtime="20231219 10:44:21.904"/>
+</test>
+<test id="s1-t2" name="Testcase2" line="19">
+<kw name="Get Length" library="BuiltIn">
+<arg>excelofall.xlsx</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20231219 10:44:21.910" level="INFO">Length is 15</msg>
+<status status="PASS" starttime="20231219 10:44:21.910" endtime="20231219 10:44:21.910"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.904" endtime="20231219 10:44:21.910"/>
+</test>
+<test id="s1-t3" name="Testcase3" line="23">
+<for flavor="IN RANGE">
+<var>${counter}</var>
+<value>1</value>
+<value>16</value>
+<iter>
+<var name="${counter}">1</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${exce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:21.919" level="INFO">${exce} = dummy00</msg>
+<status status="PASS" starttime="20231219 10:44:21.919" endtime="20231219 10:44:21.919"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${ev}</var>
+<arg>"${exce}${counter}"</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20231219 10:44:21.919" level="INFO">${ev} = "dummy001"</msg>
+<status status="PASS" starttime="20231219 10:44:21.919" endtime="20231219 10:44:21.919"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ev}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:21.919" level="INFO">"dummy001"</msg>
+<status status="PASS" starttime="20231219 10:44:21.919" endtime="20231219 10:44:21.919"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.919" endtime="20231219 10:44:21.919"/>
+</iter>
+<iter>
+<var name="${counter}">2</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${exce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:21.919" level="INFO">${exce} = dummy</msg>
+<status status="PASS" starttime="20231219 10:44:21.919" endtime="20231219 10:44:21.919"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${ev}</var>
+<arg>"${exce}${counter}"</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20231219 10:44:21.927" level="INFO">${ev} = "dummy2"</msg>
+<status status="PASS" starttime="20231219 10:44:21.919" endtime="20231219 10:44:21.927"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ev}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:21.927" level="INFO">"dummy2"</msg>
+<status status="PASS" starttime="20231219 10:44:21.927" endtime="20231219 10:44:21.927"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.919" endtime="20231219 10:44:21.927"/>
+</iter>
+<iter>
+<var name="${counter}">3</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${exce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:21.927" level="INFO">${exce} = dummy33</msg>
+<status status="PASS" starttime="20231219 10:44:21.927" endtime="20231219 10:44:21.927"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${ev}</var>
+<arg>"${exce}${counter}"</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20231219 10:44:21.927" level="INFO">${ev} = "dummy333"</msg>
+<status status="PASS" starttime="20231219 10:44:21.927" endtime="20231219 10:44:21.927"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ev}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:21.927" level="INFO">"dummy333"</msg>
+<status status="PASS" starttime="20231219 10:44:21.927" endtime="20231219 10:44:21.927"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.927" endtime="20231219 10:44:21.932"/>
+</iter>
+<iter>
+<var name="${counter}">4</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${exce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:21.935" level="INFO">${exce} = XXXXXX</msg>
+<status status="PASS" starttime="20231219 10:44:21.935" endtime="20231219 10:44:21.935"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${ev}</var>
+<arg>"${exce}${counter}"</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20231219 10:44:21.935" level="INFO">${ev} = "XXXXXX4"</msg>
+<status status="PASS" starttime="20231219 10:44:21.935" endtime="20231219 10:44:21.935"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ev}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:21.935" level="INFO">"XXXXXX4"</msg>
+<status status="PASS" starttime="20231219 10:44:21.935" endtime="20231219 10:44:21.935"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.932" endtime="20231219 10:44:21.935"/>
+</iter>
+<iter>
+<var name="${counter}">5</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${exce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:21.935" level="INFO">${exce} = YYYYY</msg>
+<status status="PASS" starttime="20231219 10:44:21.935" endtime="20231219 10:44:21.935"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${ev}</var>
+<arg>"${exce}${counter}"</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20231219 10:44:21.943" level="INFO">${ev} = "YYYYY5"</msg>
+<status status="PASS" starttime="20231219 10:44:21.943" endtime="20231219 10:44:21.943"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ev}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:21.943" level="INFO">"YYYYY5"</msg>
+<status status="PASS" starttime="20231219 10:44:21.943" endtime="20231219 10:44:21.943"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.935" endtime="20231219 10:44:21.943"/>
+</iter>
+<iter>
+<var name="${counter}">6</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${exce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:21.947" level="INFO">${exce} = ZZZZ</msg>
+<status status="PASS" starttime="20231219 10:44:21.947" endtime="20231219 10:44:21.947"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${ev}</var>
+<arg>"${exce}${counter}"</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20231219 10:44:21.947" level="INFO">${ev} = "ZZZZ6"</msg>
+<status status="PASS" starttime="20231219 10:44:21.947" endtime="20231219 10:44:21.947"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ev}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:21.947" level="INFO">"ZZZZ6"</msg>
+<status status="PASS" starttime="20231219 10:44:21.947" endtime="20231219 10:44:21.947"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.947" endtime="20231219 10:44:21.947"/>
+</iter>
+<iter>
+<var name="${counter}">7</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${exce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:21.947" level="INFO">${exce} = dummy1</msg>
+<status status="PASS" starttime="20231219 10:44:21.947" endtime="20231219 10:44:21.947"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${ev}</var>
+<arg>"${exce}${counter}"</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20231219 10:44:21.952" level="INFO">${ev} = "dummy17"</msg>
+<status status="PASS" starttime="20231219 10:44:21.947" endtime="20231219 10:44:21.952"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ev}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:21.952" level="INFO">"dummy17"</msg>
+<status status="PASS" starttime="20231219 10:44:21.952" endtime="20231219 10:44:21.952"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.947" endtime="20231219 10:44:21.952"/>
+</iter>
+<iter>
+<var name="${counter}">8</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${exce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:21.956" level="INFO">${exce} = dummy2</msg>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${ev}</var>
+<arg>"${exce}${counter}"</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20231219 10:44:21.956" level="INFO">${ev} = "dummy28"</msg>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ev}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:21.956" level="INFO">"dummy28"</msg>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</iter>
+<iter>
+<var name="${counter}">9</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${exce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:21.956" level="INFO">${exce} = dummy3</msg>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${ev}</var>
+<arg>"${exce}${counter}"</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20231219 10:44:21.956" level="INFO">${ev} = "dummy39"</msg>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ev}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:21.956" level="INFO">"dummy39"</msg>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</iter>
+<iter>
+<var name="${counter}">10</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${exce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:21.956" level="INFO">${exce} = dummy4</msg>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${ev}</var>
+<arg>"${exce}${counter}"</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20231219 10:44:21.956" level="INFO">${ev} = "dummy410"</msg>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ev}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:21.956" level="INFO">"dummy410"</msg>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</iter>
+<iter>
+<var name="${counter}">11</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${exce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:21.956" level="INFO">${exce} = dummy5</msg>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${ev}</var>
+<arg>"${exce}${counter}"</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20231219 10:44:21.956" level="INFO">${ev} = "dummy511"</msg>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ev}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:21.956" level="INFO">"dummy511"</msg>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</iter>
+<iter>
+<var name="${counter}">12</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${exce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:21.956" level="INFO">${exce} = dummy6</msg>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${ev}</var>
+<arg>"${exce}${counter}"</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20231219 10:44:21.956" level="INFO">${ev} = "dummy612"</msg>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ev}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:21.956" level="INFO">"dummy612"</msg>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.956"/>
+</iter>
+<iter>
+<var name="${counter}">13</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${exce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:21.968" level="INFO">${exce} = dummy7</msg>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.969"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${ev}</var>
+<arg>"${exce}${counter}"</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20231219 10:44:21.969" level="INFO">${ev} = "dummy713"</msg>
+<status status="PASS" starttime="20231219 10:44:21.969" endtime="20231219 10:44:21.971"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ev}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:21.973" level="INFO">"dummy713"</msg>
+<status status="PASS" starttime="20231219 10:44:21.971" endtime="20231219 10:44:21.973"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.956" endtime="20231219 10:44:21.973"/>
+</iter>
+<iter>
+<var name="${counter}">14</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${exce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:21.973" level="INFO">${exce} = dummy8</msg>
+<status status="PASS" starttime="20231219 10:44:21.973" endtime="20231219 10:44:21.973"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${ev}</var>
+<arg>"${exce}${counter}"</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20231219 10:44:21.973" level="INFO">${ev} = "dummy814"</msg>
+<status status="PASS" starttime="20231219 10:44:21.973" endtime="20231219 10:44:21.973"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ev}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:21.973" level="INFO">"dummy814"</msg>
+<status status="PASS" starttime="20231219 10:44:21.973" endtime="20231219 10:44:21.973"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.973" endtime="20231219 10:44:21.973"/>
+</iter>
+<iter>
+<var name="${counter}">15</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${exce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:21.973" level="INFO">${exce} = dummy9</msg>
+<status status="PASS" starttime="20231219 10:44:21.973" endtime="20231219 10:44:21.973"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${ev}</var>
+<arg>"${exce}${counter}"</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20231219 10:44:21.973" level="INFO">${ev} = "dummy915"</msg>
+<status status="PASS" starttime="20231219 10:44:21.973" endtime="20231219 10:44:21.973"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ev}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:21.973" level="INFO">"dummy915"</msg>
+<status status="PASS" starttime="20231219 10:44:21.973" endtime="20231219 10:44:21.973"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.973" endtime="20231219 10:44:21.973"/>
+</iter>
+<status status="PASS" starttime="20231219 10:44:21.919" endtime="20231219 10:44:21.973"/>
+</for>
+<status status="PASS" starttime="20231219 10:44:21.910" endtime="20231219 10:44:21.973"/>
+</test>
+<test id="s1-t4" name="Testcase4" line="31">
+<kw name="Read Excel Row" library="ExcelLibrary">
+<var>${nu}</var>
+<arg>17</arg>
+<doc>Returns content of a row from the current sheet of the document.</doc>
+<msg timestamp="20231219 10:44:21.985" level="INFO">${nu} = [17, 'dummy11']</msg>
+<status status="PASS" starttime="20231219 10:44:21.985" endtime="20231219 10:44:21.985"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${nu}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:21.985" level="INFO">[17, 'dummy11']</msg>
+<status status="PASS" starttime="20231219 10:44:21.985" endtime="20231219 10:44:21.985"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.984" endtime="20231219 10:44:21.992"/>
+</test>
+<test id="s1-t5" name="Testcase5" line="36">
+<kw name="Read Excel Row" library="ExcelLibrary">
+<var>${row}</var>
+<arg>10</arg>
+<doc>Returns content of a row from the current sheet of the document.</doc>
+<msg timestamp="20231219 10:44:21.997" level="INFO">${row} = [10, 'dummy4']</msg>
+<status status="PASS" starttime="20231219 10:44:21.997" endtime="20231219 10:44:21.997"/>
+</kw>
+<kw name="Read Excel Row" library="ExcelLibrary">
+<var>${row1}</var>
+<arg>20</arg>
+<doc>Returns content of a row from the current sheet of the document.</doc>
+<msg timestamp="20231219 10:44:22.002" level="INFO">${row1} = [20, 'dummy14']</msg>
+<status status="PASS" starttime="20231219 10:44:22.002" endtime="20231219 10:44:22.002"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${test}</var>
+<arg>${row}</arg>
+<arg>${row1}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20231219 10:44:22.002" level="INFO">${test} = [10, 'dummy4'] [20, 'dummy14']</msg>
+<status status="PASS" starttime="20231219 10:44:22.002" endtime="20231219 10:44:22.002"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:21.997" endtime="20231219 10:44:22.002"/>
+</test>
+<test id="s1-t6" name="Testcase6" line="42">
+<for flavor="IN RANGE">
+<var>${counter}</var>
+<value>1</value>
+<value>20</value>
+<iter>
+<var name="${counter}">1</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${ce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:22.010" level="INFO">${ce} = dummy00</msg>
+<status status="PASS" starttime="20231219 10:44:22.010" endtime="20231219 10:44:22.010"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ce}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:22.010" level="INFO">dummy00</msg>
+<status status="PASS" starttime="20231219 10:44:22.010" endtime="20231219 10:44:22.010"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:22.010" endtime="20231219 10:44:22.010"/>
+</iter>
+<iter>
+<var name="${counter}">2</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${ce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:22.018" level="INFO">${ce} = dummy</msg>
+<status status="PASS" starttime="20231219 10:44:22.018" endtime="20231219 10:44:22.018"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ce}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:22.018" level="INFO">dummy</msg>
+<status status="PASS" starttime="20231219 10:44:22.018" endtime="20231219 10:44:22.018"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:22.010" endtime="20231219 10:44:22.018"/>
+</iter>
+<iter>
+<var name="${counter}">3</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${ce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:22.018" level="INFO">${ce} = dummy33</msg>
+<status status="PASS" starttime="20231219 10:44:22.018" endtime="20231219 10:44:22.018"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ce}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:22.018" level="INFO">dummy33</msg>
+<status status="PASS" starttime="20231219 10:44:22.018" endtime="20231219 10:44:22.018"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:22.018" endtime="20231219 10:44:22.018"/>
+</iter>
+<iter>
+<var name="${counter}">4</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${ce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:22.026" level="INFO">${ce} = XXXXXX</msg>
+<status status="PASS" starttime="20231219 10:44:22.026" endtime="20231219 10:44:22.026"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ce}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:22.026" level="INFO">XXXXXX</msg>
+<status status="PASS" starttime="20231219 10:44:22.026" endtime="20231219 10:44:22.026"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:22.018" endtime="20231219 10:44:22.026"/>
+</iter>
+<iter>
+<var name="${counter}">5</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${ce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:22.026" level="INFO">${ce} = YYYYY</msg>
+<status status="PASS" starttime="20231219 10:44:22.026" endtime="20231219 10:44:22.026"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ce}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:22.026" level="INFO">YYYYY</msg>
+<status status="PASS" starttime="20231219 10:44:22.026" endtime="20231219 10:44:22.026"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:22.026" endtime="20231219 10:44:22.026"/>
+</iter>
+<iter>
+<var name="${counter}">6</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${ce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:22.026" level="INFO">${ce} = ZZZZ</msg>
+<status status="PASS" starttime="20231219 10:44:22.026" endtime="20231219 10:44:22.034"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ce}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:22.034" level="INFO">ZZZZ</msg>
+<status status="PASS" starttime="20231219 10:44:22.034" endtime="20231219 10:44:22.034"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:22.026" endtime="20231219 10:44:22.034"/>
+</iter>
+<iter>
+<var name="${counter}">7</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${ce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:22.042" level="INFO">${ce} = dummy1</msg>
+<status status="PASS" starttime="20231219 10:44:22.042" endtime="20231219 10:44:22.042"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ce}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:22.042" level="INFO">dummy1</msg>
+<status status="PASS" starttime="20231219 10:44:22.042" endtime="20231219 10:44:22.042"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:22.034" endtime="20231219 10:44:22.042"/>
+</iter>
+<iter>
+<var name="${counter}">8</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${ce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:22.042" level="INFO">${ce} = dummy2</msg>
+<status status="PASS" starttime="20231219 10:44:22.042" endtime="20231219 10:44:22.042"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ce}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:22.042" level="INFO">dummy2</msg>
+<status status="PASS" starttime="20231219 10:44:22.042" endtime="20231219 10:44:22.042"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:22.042" endtime="20231219 10:44:22.042"/>
+</iter>
+<iter>
+<var name="${counter}">9</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${ce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:22.042" level="INFO">${ce} = dummy3</msg>
+<status status="PASS" starttime="20231219 10:44:22.042" endtime="20231219 10:44:22.052"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ce}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:22.052" level="INFO">dummy3</msg>
+<status status="PASS" starttime="20231219 10:44:22.052" endtime="20231219 10:44:22.052"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:22.042" endtime="20231219 10:44:22.052"/>
+</iter>
+<iter>
+<var name="${counter}">10</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${ce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:22.052" level="INFO">${ce} = dummy4</msg>
+<status status="PASS" starttime="20231219 10:44:22.052" endtime="20231219 10:44:22.052"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ce}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:22.060" level="INFO">dummy4</msg>
+<status status="PASS" starttime="20231219 10:44:22.060" endtime="20231219 10:44:22.060"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:22.052" endtime="20231219 10:44:22.060"/>
+</iter>
+<iter>
+<var name="${counter}">11</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${ce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:22.060" level="INFO">${ce} = dummy5</msg>
+<status status="PASS" starttime="20231219 10:44:22.060" endtime="20231219 10:44:22.060"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ce}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:22.060" level="INFO">dummy5</msg>
+<status status="PASS" starttime="20231219 10:44:22.060" endtime="20231219 10:44:22.066"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:22.060" endtime="20231219 10:44:22.066"/>
+</iter>
+<iter>
+<var name="${counter}">12</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${ce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:22.066" level="INFO">${ce} = dummy6</msg>
+<status status="PASS" starttime="20231219 10:44:22.066" endtime="20231219 10:44:22.066"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ce}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:22.069" level="INFO">dummy6</msg>
+<status status="PASS" starttime="20231219 10:44:22.066" endtime="20231219 10:44:22.069"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:22.066" endtime="20231219 10:44:22.069"/>
+</iter>
+<iter>
+<var name="${counter}">13</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${ce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:22.071" level="INFO">${ce} = dummy7</msg>
+<status status="PASS" starttime="20231219 10:44:22.071" endtime="20231219 10:44:22.071"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ce}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:22.071" level="INFO">dummy7</msg>
+<status status="PASS" starttime="20231219 10:44:22.071" endtime="20231219 10:44:22.071"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:22.069" endtime="20231219 10:44:22.071"/>
+</iter>
+<iter>
+<var name="${counter}">14</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${ce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:22.071" level="INFO">${ce} = dummy8</msg>
+<status status="PASS" starttime="20231219 10:44:22.071" endtime="20231219 10:44:22.077"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ce}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:22.077" level="INFO">dummy8</msg>
+<status status="PASS" starttime="20231219 10:44:22.077" endtime="20231219 10:44:22.077"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:22.071" endtime="20231219 10:44:22.077"/>
+</iter>
+<iter>
+<var name="${counter}">15</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${ce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:22.077" level="INFO">${ce} = dummy9</msg>
+<status status="PASS" starttime="20231219 10:44:22.077" endtime="20231219 10:44:22.077"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ce}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:22.077" level="INFO">dummy9</msg>
+<status status="PASS" starttime="20231219 10:44:22.077" endtime="20231219 10:44:22.077"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:22.077" endtime="20231219 10:44:22.077"/>
+</iter>
+<iter>
+<var name="${counter}">16</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${ce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:22.077" level="INFO">${ce} = dummy10</msg>
+<status status="PASS" starttime="20231219 10:44:22.077" endtime="20231219 10:44:22.077"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ce}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:22.077" level="INFO">dummy10</msg>
+<status status="PASS" starttime="20231219 10:44:22.077" endtime="20231219 10:44:22.077"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:22.077" endtime="20231219 10:44:22.077"/>
+</iter>
+<iter>
+<var name="${counter}">17</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${ce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:22.077" level="INFO">${ce} = dummy11</msg>
+<status status="PASS" starttime="20231219 10:44:22.077" endtime="20231219 10:44:22.077"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ce}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:22.085" level="INFO">dummy11</msg>
+<status status="PASS" starttime="20231219 10:44:22.077" endtime="20231219 10:44:22.085"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:22.077" endtime="20231219 10:44:22.085"/>
+</iter>
+<iter>
+<var name="${counter}">18</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${ce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:22.085" level="INFO">${ce} = dummy12</msg>
+<status status="PASS" starttime="20231219 10:44:22.085" endtime="20231219 10:44:22.085"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ce}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:22.085" level="INFO">dummy12</msg>
+<status status="PASS" starttime="20231219 10:44:22.085" endtime="20231219 10:44:22.085"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:22.085" endtime="20231219 10:44:22.085"/>
+</iter>
+<iter>
+<var name="${counter}">19</var>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${ce}</var>
+<arg>${counter}</arg>
+<arg>2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20231219 10:44:22.085" level="INFO">${ce} = dummy13</msg>
+<status status="PASS" starttime="20231219 10:44:22.085" endtime="20231219 10:44:22.085"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${ce}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231219 10:44:22.085" level="INFO">dummy13</msg>
+<status status="PASS" starttime="20231219 10:44:22.085" endtime="20231219 10:44:22.085"/>
+</kw>
+<status status="PASS" starttime="20231219 10:44:22.085" endtime="20231219 10:44:22.085"/>
+</iter>
+<status status="PASS" starttime="20231219 10:44:22.010" endtime="20231219 10:44:22.085"/>
+</for>
+<status status="PASS" starttime="20231219 10:44:22.010" endtime="20231219 10:44:22.085"/>
+</test>
+<status status="PASS" starttime="20231219 10:44:21.009" endtime="20231219 10:44:22.117"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Testscripts">Testscripts</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
